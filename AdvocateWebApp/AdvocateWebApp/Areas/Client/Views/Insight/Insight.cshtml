@@ -1,0 +1,153 @@
+﻿@model AdvocateWebApp.Models.InsightArticle
+
+@{
+    ViewData["Title"] = Model?.MetaTitle ?? Model?.Title ?? "Insight Article";
+}
+
+<div class="container-fluid px-1 px-md-3 my-3">
+    <div class="row g-3">
+
+        <!-- LEFT SIDEBAR: Mobile Collapsible Dropdown & Desktop Sidebar -->
+        <aside class="col-12 col-md-4 col-lg-3">
+            <div class="card border-0 shadow-sm rounded-3 p-3 bg-white sidebar-card">
+
+                <!-- Mobile Only: Toggle Button -->
+                <div class="d-md-none">
+                    <button class="btn btn-outline-dark w-100 d-flex align-items-center justify-content-between sidebar-toggle-btn collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#sidebarInsights"
+                            aria-expanded="false"
+                            aria-controls="sidebarInsights">
+                        <span class="fw-semibold text-truncate me-2">
+                            <i class="bi bi-journal-text me-2 text-primary"></i>
+                            @(Model?.Title ?? "Select Insight")
+                        </span>
+                        <i class="bi bi-chevron-down sidebar-chevron"></i>
+                    </button>
+                </div>
+
+                <!-- Insights Menu Grouped by Category Name -->
+                <div class="collapse d-md-block sidebar-scrollable mt-3 mt-md-0" id="sidebarInsights">
+                    @if (ViewBag.AllArticles is IEnumerable<AdvocateWebApp.Models.InsightArticle> allArticles && allArticles.Any())
+                    {
+                        var groupedArticles = allArticles.GroupBy(a => a.CategoryName ?? "General");
+
+                        foreach (var categoryGroup in groupedArticles)
+                        {
+                            <div class="mb-3">
+                                <h6 class="fw-bold text-dark border-bottom pb-2 mb-2 fs-6">
+                                    @categoryGroup.Key
+                                </h6>
+                                <div class="list-group list-group-flush">
+                                    @foreach (var item in categoryGroup)
+                                    {
+                                        bool isActive = string.Equals(Model?.Slug, item.Slug, StringComparison.OrdinalIgnoreCase);
+
+                                        <a asp-area="Client"
+                                           asp-controller="Insight"
+                                           asp-action="Insight"
+                                           asp-route-slug="@item.Slug"
+                                           class="list-group-item list-group-item-action border-0 py-2 px-3 rounded mb-1 sidebar-item @(isActive ? "active-sidebar-item" : "")">
+                                            @item.Title
+                                        </a>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <p class="text-muted small mb-0 py-2">No insight articles available.</p>
+                    }
+                </div>
+
+            </div>
+        </aside>
+
+        <!-- RIGHT MAIN CONTENT: Dynamic Details -->
+        <main class="col-12 col-md-8 col-lg-9">
+            <div class="card border-0 shadow-sm rounded-3 p-3 p-md-4 bg-white">
+
+                <!-- Banner Image Container (Optimized for Mobile & Desktop) -->
+                <div class="mb-4 bg-light text-center banner-wrapper shadow-sm rounded-3">
+                    @if (!string.IsNullOrWhiteSpace(Model?.BannerImageUrl))
+                    {
+                        <img src="@Model.BannerImageUrl" class="banner-img" alt="@(Model?.Title ?? "Insight") Banner" />
+                    }
+                    else
+                    {
+                        <div class="d-flex align-items-center justify-content-center text-muted border border-2 border-dashed rounded h-100 py-4">
+                            <span class="fw-medium"><i class="bi bi-image me-2"></i>Banner Image Not Available</span>
+                        </div>
+                    }
+                </div>
+
+                <!-- Main Content Area & Call-To-Action Side Section -->
+                <div class="row g-4">
+
+                    <!-- Main Text Body -->
+                    <div class="col-12 col-xl-8">
+                        <div class="mb-2">
+                            <span class="badge bg-secondary text-uppercase small px-2 py-1">@Model?.CategoryName</span>
+                            <span class="text-muted small ms-2"><i class="bi bi-calendar-event me-1"></i> @Model?.CreatedDate.ToString("MMMM dd, yyyy")</span>
+                        </div>
+
+                        <h1 class="fw-bold text-dark mb-3 page-title-text fs-2">
+                            @(Model?.Title ?? "Insight Details")
+                        </h1>
+
+                        @if (!string.IsNullOrWhiteSpace(Model?.ShortDescription))
+                        {
+                            <div class="text-dark mb-4 lead-description">
+                                <p class="lead fs-6 mb-0 text-secondary fw-normal">@Model.ShortDescription</p>
+                            </div>
+                        }
+
+                        <div class="content-body text-dark mb-4 crisp-text">
+                            @if (!string.IsNullOrWhiteSpace(Model?.FullContent))
+                            {
+                                @Html.Raw(Model.FullContent)
+                            }
+                            else
+                            {
+                                <p class="text-muted fst-italic">Detailed content will be uploaded soon.</p>
+                            }
+                        </div>
+                    </div>
+
+                    <!-- Call-To-Action Box -->
+                    <div class="col-12 col-xl-4">
+                        <div class="mb-2 text-xl-end fw-semibold text-muted small">
+                            @(Model?.Title)
+                        </div>
+
+                        <div class="card border border-dark rounded-3 p-3 bg-light shadow-sm">
+                            <h5 class="fw-bold text-dark mb-3">Resource & Contact</h5>
+
+                            @if (!string.IsNullOrWhiteSpace(Model?.PDFDocumentUrl))
+                            {
+                                <a href="@Model.PDFDocumentUrl" target="_blank" class="btn btn-outline-dark w-100 mb-2 text-start text-truncate fw-medium">
+                                    <i class="bi bi-file-earmark-pdf-fill me-2 text-danger"></i> Study Document (PDF)
+                                </a>
+                            }
+                            else
+                            {
+                                <button class="btn btn-outline-dark w-100 mb-2 text-start text-muted" disabled>
+                                    <i class="bi bi-file-earmark-pdf me-2"></i> Study Document (PDF)
+                                </button>
+                            }
+
+                            <a asp-area="Client" asp-controller="Home" asp-action="Contact" class="btn btn-dark w-100 text-start fw-medium">
+                                <i class="bi bi-person-lines-fill me-2"></i> Contact Expert
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+</div>

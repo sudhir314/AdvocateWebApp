@@ -3,44 +3,108 @@
   "WorkspaceRootPath": "D:\\AdvocateWebApp\\AdvocateWebApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95152E72-D4AD-4641-94A6-6A1B2781DCD0}|Data\\DataAccess.csproj|d:\\advocatewebapp\\advocatewebapp\\data\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95152E72-D4AD-4641-94A6-6A1B2781DCD0}|Data\\DataAccess.csproj|solutionrelative:data\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\client\\views\\insight\\insight.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\client\\views\\insight\\insight.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\advocatewebapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\advocatewebapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\client\\controllers\\insightcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\client\\controllers\\insightcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\client\\controllers\\navcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\client\\controllers\\navcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FDA04832-6526-45C0-B6EB-018D264F5CE1}|Models\\Models.csproj|d:\\advocatewebapp\\advocatewebapp\\models\\insightarticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDA04832-6526-45C0-B6EB-018D264F5CE1}|Models\\Models.csproj|solutionrelative:models\\insightarticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AdvocateWebApp\\AdvocateWebApp\\Data\\Migrations\\20260817091900_AddProfessionalInsightFields.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\Migrations\\20260817091900_AddProfessionalInsightFields.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\client\\views\\nav\\practicearea.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\client\\views\\nav\\practicearea.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\identity\\pages\\account\\manage\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\identity\\pages\\account\\manage\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\identity\\pages\\account\\manage\\personaldata.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\identity\\pages\\account\\manage\\personaldata.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\identity\\pages\\account\\manage\\deletepersonaldata.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\identity\\pages\\account\\manage\\deletepersonaldata.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\identity\\pages\\account\\loginwith2fa.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\identity\\pages\\account\\loginwith2fa.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\identity\\pages\\account\\confirmemail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\identity\\pages\\account\\confirmemail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\identity\\pages\\account\\resetpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\identity\\pages\\account\\resetpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\identity\\pages\\account\\resendemailconfirmation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\identity\\pages\\account\\resendemailconfirmation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\identity\\pages\\account\\registerconfirmation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\identity\\pages\\account\\registerconfirmation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\identity\\pages\\account\\manage\\twofactorauthentication.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\identity\\pages\\account\\manage\\twofactorauthentication.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\client\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\client\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\identity\\pages\\account\\manage\\setpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\identity\\pages\\account\\manage\\setpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\identity\\pages\\account\\manage\\resetauthenticator.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\identity\\pages\\account\\manage\\resetauthenticator.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\identity\\pages\\account\\manage\\enableauthenticator.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\identity\\pages\\account\\manage\\enableauthenticator.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\identity\\pages\\account\\manage\\generaterecoverycodes.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\identity\\pages\\account\\manage\\generaterecoverycodes.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\identity\\pages\\account\\manage\\externallogins.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\identity\\pages\\account\\manage\\externallogins.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|d:\\advocatewebapp\\advocatewebapp\\advocatewebapp\\areas\\identity\\pages\\account\\manage\\email.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0FDE582-DF38-B0FE-955A-BFBC505759D4}|AdvocateWebApp\\AdvocateWebApp.csproj|solutionrelative:advocatewebapp\\areas\\identity\\pages\\account\\manage\\email.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95152E72-D4AD-4641-94A6-6A1B2781DCD0}|Data\\DataAccess.csproj|d:\\advocatewebapp\\advocatewebapp\\data\\data\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95152E72-D4AD-4641-94A6-6A1B2781DCD0}|Data\\DataAccess.csproj|solutionrelative:data\\data\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95152E72-D4AD-4641-94A6-6A1B2781DCD0}|Data\\DataAccess.csproj|d:\\advocatewebapp\\advocatewebapp\\data\\dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{95152E72-D4AD-4641-94A6-6A1B2781DCD0}|Data\\DataAccess.csproj|solutionrelative:data\\dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDA04832-6526-45C0-B6EB-018D264F5CE1}|Models\\Models.csproj|d:\\advocatewebapp\\advocatewebapp\\models\\models.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FDA04832-6526-45C0-B6EB-018D264F5CE1}|Models\\Models.csproj|solutionrelative:models\\models.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +114,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,124 +126,341 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAwD0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-04T12:15:02.155Z"
+              "DocumentIndex": 1,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "AdvocateWebApp\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "AdvocateWebApp\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAABkCAAAAAAAAAAAkwC4CAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-08-17T09:23:52.686Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\Data\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\Data\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABOAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "20260817091900_AddProfessionalInsightFields.cs",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\Data\\Migrations\\20260817091900_AddProfessionalInsightFields.cs",
+              "RelativeDocumentMoniker": "Data\\Migrations\\20260817091900_AddProfessionalInsightFields.cs",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\Data\\Migrations\\20260817091900_AddProfessionalInsightFields.cs",
+              "RelativeToolTip": "Data\\Migrations\\20260817091900_AddProfessionalInsightFields.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-04T11:57:31.446Z"
+              "WhenOpened": "2026-08-17T09:19:00.706Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "NavController.cs",
-              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Client\\Controllers\\NavController.cs",
-              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Client\\Controllers\\NavController.cs",
-              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Client\\Controllers\\NavController.cs",
-              "RelativeToolTip": "AdvocateWebApp\\Areas\\Client\\Controllers\\NavController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAwwB0AAAApAAAAAAAAAA==",
+              "Title": "InsightArticle.cs",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\Models\\InsightArticle.cs",
+              "RelativeDocumentMoniker": "Models\\InsightArticle.cs",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\Models\\InsightArticle.cs",
+              "RelativeToolTip": "Models\\InsightArticle.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAA6wEMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-04T11:17:32.599Z"
+              "WhenOpened": "2026-08-17T09:18:42.49Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdvocateWebApp.csproj",
-              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp.csproj",
-              "RelativeDocumentMoniker": "AdvocateWebApp\\AdvocateWebApp.csproj",
-              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp.csproj",
-              "RelativeToolTip": "AdvocateWebApp\\AdvocateWebApp.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-08-04T11:57:53.491Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PracticeArea.cshtml",
-              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Client\\Views\\Nav\\PracticeArea.cshtml",
-              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Client\\Views\\Nav\\PracticeArea.cshtml",
-              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Client\\Views\\Nav\\PracticeArea.cshtml",
-              "RelativeToolTip": "AdvocateWebApp\\Areas\\Client\\Views\\Nav\\PracticeArea.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABCAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Insight.cshtml",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Client\\Views\\Insight\\Insight.cshtml",
+              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Client\\Views\\Insight\\Insight.cshtml",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Client\\Views\\Insight\\Insight.cshtml",
+              "RelativeToolTip": "AdvocateWebApp\\Areas\\Client\\Views\\Insight\\Insight.cshtml",
+              "ViewState": "AgIAAIUAAAAAAAAAAADwv5gAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-04T11:58:18.076Z"
+              "WhenOpened": "2026-08-17T08:57:36.818Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "AdvocateWebApp\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "AdvocateWebApp\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAL8AAAAAAAAAAAAuwCgBAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAB4BAAAAAAAAAADwv2EBAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-04T12:09:00.533Z"
+              "WhenOpened": "2026-08-17T08:53:28.347Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "AdvocateWebApp\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "AdvocateWebApp\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "InsightController.cs",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Client\\Controllers\\InsightController.cs",
+              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Client\\Controllers\\InsightController.cs",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Client\\Controllers\\InsightController.cs",
+              "RelativeToolTip": "AdvocateWebApp\\Areas\\Client\\Controllers\\InsightController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAADwvzwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-04T12:22:28.883Z"
+              "WhenOpened": "2026-08-17T08:57:04.927Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "AdvocateWebApp\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Properties\\launchSettings.json",
-              "RelativeToolTip": "AdvocateWebApp\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-08-03T13:48:36.3Z",
+              "DocumentIndex": 6,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
+              "RelativeToolTip": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-17T07:30:52.698Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "PersonalData.cshtml.cs",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml.cs",
+              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml.cs",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml.cs",
+              "RelativeToolTip": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T07:30:47.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DeletePersonalData.cshtml.cs",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\DeletePersonalData.cshtml.cs",
+              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\DeletePersonalData.cshtml.cs",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\DeletePersonalData.cshtml.cs",
+              "RelativeToolTip": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\DeletePersonalData.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T07:30:43.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginWith2fa.cshtml.cs",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\LoginWith2fa.cshtml.cs",
+              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\LoginWith2fa.cshtml.cs",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\LoginWith2fa.cshtml.cs",
+              "RelativeToolTip": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\LoginWith2fa.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T07:30:39.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ConfirmEmail.cshtml.cs",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml.cs",
+              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml.cs",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml.cs",
+              "RelativeToolTip": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T07:30:35.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ResetPassword.cshtml.cs",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml.cs",
+              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml.cs",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml.cs",
+              "RelativeToolTip": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwAwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T07:30:31.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ResendEmailConfirmation.cshtml.cs",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml.cs",
+              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml.cs",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml.cs",
+              "RelativeToolTip": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAgwA4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T07:30:25.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RegisterConfirmation.cshtml.cs",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml.cs",
+              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml.cs",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml.cs",
+              "RelativeToolTip": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T07:30:18.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Register.cshtml.cs",
               "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "RelativeToolTip": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ViewState": "AgIAAJ0AAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAgwBMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-04T12:15:43.384Z"
+              "WhenOpened": "2026-08-17T07:30:04.92Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Client\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Client\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Client\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "AdvocateWebApp\\Areas\\Client\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "TwoFactorAuthentication.cshtml.cs",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml.cs",
+              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml.cs",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml.cs",
+              "RelativeToolTip": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-04T12:04:22.177Z"
+              "WhenOpened": "2026-08-17T07:29:56.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SetPassword.cshtml.cs",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml.cs",
+              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml.cs",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml.cs",
+              "RelativeToolTip": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T07:29:51.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ResetAuthenticator.cshtml.cs",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\ResetAuthenticator.cshtml.cs",
+              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\ResetAuthenticator.cshtml.cs",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\ResetAuthenticator.cshtml.cs",
+              "RelativeToolTip": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\ResetAuthenticator.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T07:29:14.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EnableAuthenticator.cshtml.cs",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\EnableAuthenticator.cshtml.cs",
+              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\EnableAuthenticator.cshtml.cs",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\EnableAuthenticator.cshtml.cs",
+              "RelativeToolTip": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\EnableAuthenticator.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T07:29:04.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "RelativeToolTip": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T07:28:50.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "GenerateRecoveryCodes.cshtml.cs",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml.cs",
+              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml.cs",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml.cs",
+              "RelativeToolTip": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T07:28:41.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ExternalLogins.cshtml.cs",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\ExternalLogins.cshtml.cs",
+              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\ExternalLogins.cshtml.cs",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\ExternalLogins.cshtml.cs",
+              "RelativeToolTip": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\ExternalLogins.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T07:28:28.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Email.cshtml.cs",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
+              "RelativeDocumentMoniker": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
+              "RelativeToolTip": "AdvocateWebApp\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAgwA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T07:28:13.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\Data\\Data\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Data\\Data\\ApplicationUser.cs",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\Data\\Data\\ApplicationUser.cs",
+              "RelativeToolTip": "Data\\Data\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T07:13:30.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "DataAccess",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\Data\\DataAccess.csproj",
+              "RelativeDocumentMoniker": "Data\\DataAccess.csproj",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\Data\\DataAccess.csproj",
+              "RelativeToolTip": "Data\\DataAccess.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-17T07:02:48.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Models",
+              "DocumentMoniker": "D:\\AdvocateWebApp\\AdvocateWebApp\\Models\\Models.csproj",
+              "RelativeDocumentMoniker": "Models\\Models.csproj",
+              "ToolTip": "D:\\AdvocateWebApp\\AdvocateWebApp\\Models\\Models.csproj",
+              "RelativeToolTip": "Models\\Models.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-17T07:07:23.229Z",
+              "EditorCaption": ""
             }
           ]
         }

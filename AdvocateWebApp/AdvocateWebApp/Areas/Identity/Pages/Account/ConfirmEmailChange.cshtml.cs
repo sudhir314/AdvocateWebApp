@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
-using AdvocateWebApp.Data;
+using AdvocateWebApp.DataAccess.Data;
 namespace AdvocateWebApp.Areas.Identity.Pages.Account;
 
 public class ConfirmEmailChangeModel : PageModel

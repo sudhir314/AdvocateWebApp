@@ -298,49 +298,42 @@
 
                         <!-- Insights & Opportunities Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle @(string.Equals(currentController, "Insight", StringComparison.OrdinalIgnoreCase) ? "active" : "")" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                                 Insights
                             </a>
                             <div class="dropdown-menu shadow-lg border-0 mt-0 p-3 p-lg-4 rounded-3 custom-dropdown-menu">
                                 <div class="container-fluid p-0">
                                     <div class="row row-cols-1 row-cols-md-2 g-2 g-md-3">
+                                        <!-- Law Students Corner -->
                                         <div class="col">
                                             <div class="mega-menu-card h-100 p-2">
-                                                <h6 class="fw-bold border-bottom pb-1 mb-1 d-flex justify-content-between align-items-center mega-category-header"
-                                                    data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseStudentsCorner"
-                                                    aria-expanded="false"
-                                                    aria-controls="collapseStudentsCorner">
+                                                <h6 class="fw-bold border-bottom pb-1 mb-1">
                                                     <span><i class="bi bi-mortarboard me-1"></i> Law Students Corner</span>
-                                                    <i class="bi bi-chevron-down d-lg-none mega-chevron"></i>
                                                 </h6>
-                                                <div id="collapseStudentsCorner" class="collapse mega-collapse">
-                                                    <ul class="list-unstyled mb-0 pt-1 pt-lg-0">
-                                                        <li><a class="dropdown-item rounded py-1" href="#">Article Publication</a></li>
-                                                        <li><a class="dropdown-item rounded py-1" href="#">Research Paper Publication</a></li>
-                                                        <li><a class="dropdown-item rounded py-1" href="#">Internship Opportunity</a></li>
-                                                    </ul>
-                                                </div>
+                                                <ul class="list-unstyled mb-0 pt-1">
+                                                    <li><a class="dropdown-item rounded py-1 @IsSlugActive("article-publication")" href="@Url.Action("Insight", "Insight", new { area = "Client", slug = "article-publication" })">Article Publication</a></li>
+                                                    <li><a class="dropdown-item rounded py-1 @IsSlugActive("research-paper-publication")" href="@Url.Action("Insight", "Insight", new { area = "Client", slug = "research-paper-publication" })">Research Paper Publication</a></li>
+                                                    <li><a class="dropdown-item rounded py-1 @IsSlugActive("internship-opportunity")" href="@Url.Action("Insight", "Insight", new { area = "Client", slug = "internship-opportunity" })">Internship Opportunity</a></li>
+                                                </ul>
                                             </div>
                                         </div>
 
+                                      
+                                        <!-- Knowledge Centre -->
                                         <div class="col">
                                             <div class="mega-menu-card h-100 p-2">
-                                                <h6 class="fw-bold border-bottom pb-1 mb-1 d-flex justify-content-between align-items-center mega-category-header"
-                                                    data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseKnowledgeCorner"
-                                                    aria-expanded="false"
-                                                    aria-controls="collapseKnowledgeCorner">
-                                                    <span><i class="bi bi-lightbulb me-1"></i> Knowledge Corner</span>
-                                                    <i class="bi bi-chevron-down d-lg-none mega-chevron"></i>
+                                                <h6 class="fw-bold border-bottom pb-1 mb-1">
+                                                    <span><i class="bi bi-lightbulb me-1"></i> Knowledge Centre</span>
                                                 </h6>
-                                                <div id="collapseKnowledgeCorner" class="collapse mega-collapse">
-                                                    <ul class="list-unstyled mb-0 pt-1 pt-lg-0">
-                                                        <li><a class="dropdown-item rounded py-1" href="#">How to get a Bail</a></li>
-                                                        <li><a class="dropdown-item rounded py-1" href="#">How to file a Writ Petition</a></li>
-                                                        <li><a class="dropdown-item rounded py-1" href="#">Rules in Service Law</a></li>
-                                                    </ul>
-                                                </div>
+                                                <ul class="list-unstyled mb-0 pt-1" style="max-height: 280px; overflow-y: auto;">
+                                                    <li><a class="dropdown-item rounded py-1 @IsSlugActive("how-to-get-a-bail")" href="@Url.Action("Insight", "Insight", new { area = "Client", slug = "how-to-get-a-bail" })">How to get a Bail</a></li>
+                                                    <li><a class="dropdown-item rounded py-1 @IsSlugActive("how-to-file-a-writ-petition")" href="@Url.Action("Insight", "Insight", new { area = "Client", slug = "how-to-file-a-writ-petition" })">How to file a Writ Petition</a></li>
+                                                    <li><a class="dropdown-item rounded py-1 @IsSlugActive("rules-in-service-law")" href="@Url.Action("Insight", "Insight", new { area = "Client", slug = "rules-in-service-law" })">Rules in Service Law</a></li>
+                                                    <li><a class="dropdown-item rounded py-1 @IsSlugActive("supreme-court-updates")" href="@Url.Action("Insight", "Insight", new { area = "Client", slug = "supreme-court-updates" })">Updates of Supreme Court</a></li>
+                                                    <li><a class="dropdown-item rounded py-1 @IsSlugActive("cheque-bounce-sec-138-procedure")" href="@Url.Action("Insight", "Insight", new { area = "Client", slug = "cheque-bounce-sec-138-procedure" })">Cheque Bounce (Sec 138)</a></li>
+                                                    <li><a class="dropdown-item rounded py-1 @IsSlugActive("mutual-vs-contested-divorce")" href="@Url.Action("Insight", "Insight", new { area = "Client", slug = "mutual-vs-contested-divorce" })">Divorce & Family Law Guide</a></li>
+                                                    <li><a class="dropdown-item rounded py-1 @IsSlugActive("consumer-court-complaint-guide")" href="@Url.Action("Insight", "Insight", new { area = "Client", slug = "consumer-court-complaint-guide" })">Consumer Court Redressal</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>

@@ -6,10 +6,11 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using AdvocateWebApp.DataAccess.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using AdvocateWebApp.Data;
+ 
 
 namespace AdvocateWebApp.Areas.Identity.Pages.Account.Manage;
 

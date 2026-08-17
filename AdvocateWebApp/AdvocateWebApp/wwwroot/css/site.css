@@ -525,3 +525,80 @@ footer ul li a:hover,
         min-height: 180px !important;
     }
 }
+
+/* Sidebar styling enhancements */
+.sidebar-card {
+    background-color: #f8f9fa !important;
+    border: 1px solid rgba(0,0,0,0.05) !important;
+}
+
+.sidebar-scrollable {
+    max-height: 75vh;
+    overflow-y: auto;
+}
+
+.sidebar-item {
+    transition: all 0.2s ease-in-out;
+    font-size: 0.92rem;
+}
+
+    .sidebar-item:hover {
+        background-color: #e9ecef;
+        color: #1a2530 !important;
+    }
+
+.active-sidebar-item, .list-group-item.active {
+    background-color: #1a2530 !important;
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+/* Article typography */
+.article-body p {
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   INSIGHT & PRACTICE AREA BANNER OPTIMIZATION
+   ========================================================================== */
+.banner-wrapper {
+    width: 100% !important;
+    height: 320px !important; /* Perfect professional height for desktop */
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #0E1726; /* Deep legal tone placeholder background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    object-fit: cover !important; /* Ensures image fills the area proportionally without distortion */
+    object-position: center center !important; /* Centers the focal point of the legal photos */
+    display: block !important;
+    transition: transform 0.3s ease;
+}
+
+/* Subtle cinematic zoom effect on hover for a high-end feel */
+.banner-wrapper:hover .banner-img {
+    transform: scale(1.02);
+}
+
+/* Responsive adjustments for Tablets & Mobile Screens */
+@media (max-width: 991.98px) {
+    .banner-wrapper {
+        height: 240px !important; /* Medium height for tablets */
+    }
+}
+
+@media (max-width: 767.98px) {
+    .banner-wrapper {
+        height: 180px !important; /* Compact, clean height for mobile phones */
+        min-height: 180px !important;
+    }
+}

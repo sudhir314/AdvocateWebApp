@@ -47,6 +47,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2xpZW50XFZpZXdzXEhvbWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/AdvocateWebApp/AdvocateWebApp/AdvocateWebApp/Areas/Client/Views/Insight/Insight.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2xpZW50XFZpZXdzXEluc2lnaHRcSW5zaWdodC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/AdvocateWebApp/AdvocateWebApp/AdvocateWebApp/Areas/Client/Views/Nav/PracticeArea.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2xpZW50XFZpZXdzXE5hdlxQcmFjdGljZUFyZWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

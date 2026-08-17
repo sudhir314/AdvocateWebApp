@@ -28,6 +28,8 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="wwwroot\images\insights\banners\" />
+    <Folder Include="wwwroot\images\insights\thumbnails\" />
     <Folder Include="wwwroot\images\practiceArea\thumbnails\" />
   </ItemGroup>
 

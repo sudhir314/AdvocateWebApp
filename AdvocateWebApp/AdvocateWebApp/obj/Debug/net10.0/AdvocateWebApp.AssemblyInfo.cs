@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AdvocateWebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b89cced3e936725703e7a425143887726dc1ac60")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5fb14255cff64844d1d8d146862d6d541e7dffcb")]
 [assembly: System.Reflection.AssemblyProductAttribute("AdvocateWebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AdvocateWebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

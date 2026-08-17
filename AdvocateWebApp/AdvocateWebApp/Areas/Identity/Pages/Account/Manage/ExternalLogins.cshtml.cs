@@ -9,7 +9,8 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using AdvocateWebApp.Data;
+
+using AdvocateWebApp.DataAccess.Data;
 
 namespace AdvocateWebApp.Areas.Identity.Pages.Account.Manage;
 

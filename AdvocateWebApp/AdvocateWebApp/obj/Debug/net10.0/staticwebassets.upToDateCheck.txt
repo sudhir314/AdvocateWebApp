@@ -170,3 +170,10 @@ wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
+..\..\..\downloads\article-pub.png
+..\..\..\downloads\bail-steps.png
+..\..\..\downloads\internship.png
+..\..\..\downloads\research-paper.png
+..\..\..\downloads\sc-updates.png
+..\..\..\downloads\service-law.png
+..\..\..\downloads\writ-guide.png

@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
-using AdvocateWebApp.Data;
+using AdvocateWebApp.DataAccess.Data;
 
 namespace AdvocateWebApp.Areas.Identity.Pages.Account;
 
