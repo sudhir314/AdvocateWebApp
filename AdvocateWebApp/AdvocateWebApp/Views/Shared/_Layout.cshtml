@@ -1,0 +1,468 @@
+﻿@{
+    // Current Controller & Action route detect karne ke liye
+    string currentController = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
+    string currentAction = ViewContext.RouteData.Values["action"]?.ToString() ?? "";
+
+    // Normal links active check helper
+    string IsActive(string controller, string action)
+    {
+        return (string.Equals(currentController, controller, StringComparison.OrdinalIgnoreCase) &&
+                string.Equals(currentAction, action, StringComparison.OrdinalIgnoreCase)) ? "active" : "";
+    }
+
+    // Mega-menu slugs active check helper
+    string IsSlugActive(string slug)
+    {
+        var routeValue = ViewContext.RouteData.Values["slug"]?.ToString();
+        var queryValue = ViewContext.HttpContext.Request.Query["slug"].ToString();
+        var currentSlug = !string.IsNullOrEmpty(routeValue) ? routeValue : queryValue;
+
+        return string.Equals(currentSlug, slug, StringComparison.OrdinalIgnoreCase) ? "active" : "";
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AdvocateWebApp</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap-icons/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    @RenderSection("Styles", required: false)
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <nav class="navbar navbar-expand-lg navColor py-2">
+            <div class="container-fluid px-2 px-md-3 px-xl-4 position-relative d-flex align-items-center justify-content-between">
+
+                <!-- 1. Mobile Toggler -->
+                <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- 2. Brand / Logo -->
+                <a class="navbar-brand me-lg-4 me-0 fw-bold order-2 order-lg-1 custom-brand-center" href="@Url.Action("Index", "Home", new { area = "" })">
+                    <span>AdvocateWebApp</span>
+                </a>
+
+                <!-- 3. User Avatar Letter -->
+                <div class="user-avatar order-3 rounded-circle text-white d-flex align-items-center justify-content-center fw-bold ms-auto ms-lg-2 me-0 me-lg-2" style="width: 36px; height: 36px; background-color: var(--accent-color, #1a2530);">
+                    @(User.Identity?.IsAuthenticated == true ? User.Identity.Name?[0].ToString().ToUpper() : "P")
+                </div>
+
+                <!-- 4. Nav Menu Items -->
+                <div class="collapse navbar-collapse justify-content-center order-4 order-lg-2 w-100" id="navbarNav">
+                    <ul class="navbar-nav mt-3 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link @IsActive("Home", "Index")" href="@Url.Action("Index", "Home", new { area = "" })">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @IsActive("Home", "About")" href="@Url.Action("Index", "About", new { area = "Client" })">About Us</a>
+                        </li>
+
+                        <!-- Mega Menu: Practice Areas -->
+                        <li class="nav-item dropdown position-static">
+                            <a class="nav-link dropdown-toggle @(string.Equals(currentController, "Nav", StringComparison.OrdinalIgnoreCase) ? "active" : "")" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                                Practice Areas
+                            </a>
+                            <div class="dropdown-menu w-100 mega-menu shadow-lg border-0 mt-0 p-2 p-lg-3 rounded-3">
+                                <div class="container-fluid p-0">
+                                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-2">
+
+                                        <!-- Criminal Matters -->
+                                        <div class="col">
+                                            <div class="mega-menu-card h-100 p-2">
+                                                <h6 class="fw-bold border-bottom pb-1 mb-1 d-flex justify-content-between align-items-center mega-category-header"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseCriminal"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseCriminal">
+                                                    <span><i class="bi bi-shield-exclamation me-1"></i> Criminal Matters</span>
+                                                    <i class="bi bi-chevron-down d-lg-none mega-chevron"></i>
+                                                </h6>
+                                                <div id="collapseCriminal" class="collapse mega-collapse">
+                                                    <ul class="list-unstyled mb-0 pt-1 pt-lg-0">
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("bail-regular")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "bail-regular" })">Bail (Regular)</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("anticipatory-bail")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "anticipatory-bail" })">Anticipatory Bail</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("criminal-trial")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "criminal-trial" })">Trial</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("criminal-appeal")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "criminal-appeal" })">Appeal</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("quashing-petition")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "quashing-petition" })">Quashing Petition</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Civil Matters -->
+                                        <div class="col">
+                                            <div class="mega-menu-card h-100 p-2">
+                                                <h6 class="fw-bold border-bottom pb-1 mb-1 d-flex justify-content-between align-items-center mega-category-header"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseCivil"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseCivil">
+                                                    <span><i class="bi bi-file-earmark-text me-1"></i> Civil Matters</span>
+                                                    <i class="bi bi-chevron-down d-lg-none mega-chevron"></i>
+                                                </h6>
+                                                <div id="collapseCivil" class="collapse mega-collapse">
+                                                    <ul class="list-unstyled mb-0 pt-1 pt-lg-0">
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("recovery-suits")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "recovery-suits" })">Recovery Suits</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("specific-performance")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "specific-performance" })">Specific Performance</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("declaration-suits")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "declaration-suits" })">Declaration Suits</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("partition-cases")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "partition-cases" })">Partition Cases</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("injunction-matters")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "injunction-matters" })">Injunction Matters</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Constitutional Law -->
+                                        <div class="col">
+                                            <div class="mega-menu-card h-100 p-2">
+                                                <h6 class="fw-bold border-bottom pb-1 mb-1 d-flex justify-content-between align-items-center mega-category-header"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseConstitutional"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseConstitutional">
+                                                    <span><i class="bi bi-book me-1"></i> Constitutional Law</span>
+                                                    <i class="bi bi-chevron-down d-lg-none mega-chevron"></i>
+                                                </h6>
+                                                <div id="collapseConstitutional" class="collapse mega-collapse">
+                                                    <ul class="list-unstyled mb-0 pt-1 pt-lg-0">
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("writ-petitions")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "writ-petitions" })">Writs</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("public-interest-litigation")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "public-interest-litigation" })">PILs</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("fundamental-rights")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "fundamental-rights" })">Fundamental Rights</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("constitutional-other-matters")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "constitutional-other-matters" })">Other Matters</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Social & Service -->
+                                        <div class="col">
+                                            <div class="mega-menu-card h-100 p-2">
+                                                <h6 class="fw-bold border-bottom pb-1 mb-1 d-flex justify-content-between align-items-center mega-category-header"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseService"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseService">
+                                                    <span><i class="bi bi-people me-1"></i> Social & Service</span>
+                                                    <i class="bi bi-chevron-down d-lg-none mega-chevron"></i>
+                                                </h6>
+                                                <div id="collapseService" class="collapse mega-collapse">
+                                                    <ul class="list-unstyled mb-0 pt-1 pt-lg-0">
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("acp-macp-service")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "acp-macp-service" })">ACP MACP</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("pension-and-promotion")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "pension-and-promotion" })">Pension & Promotion</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("departmental-inquiry")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "departmental-inquiry" })">Departmental Inquiry</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("hpsc-hssc-matters")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "hpsc-hssc-matters" })">HPSC | HSSC</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("writs-service-matters")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "writs-service-matters" })">Writs Service</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Family Law -->
+                                        <div class="col">
+                                            <div class="mega-menu-card h-100 p-2">
+                                                <h6 class="fw-bold border-bottom pb-1 mb-1 d-flex justify-content-between align-items-center mega-category-header"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseFamily"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseFamily">
+                                                    <span><i class="bi bi-house-heart me-1"></i> Family Law</span>
+                                                    <i class="bi bi-chevron-down d-lg-none mega-chevron"></i>
+                                                </h6>
+                                                <div id="collapseFamily" class="collapse mega-collapse">
+                                                    <ul class="list-unstyled mb-0 pt-1 pt-lg-0">
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("divorce-matters")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "divorce-matters" })">Divorce</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("maintenance-cases")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "maintenance-cases" })">Maintenance</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("child-custody")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "child-custody" })">Child Custody</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("domestic-violence")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "domestic-violence" })">Domestic Violence</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("succession-matters")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "succession-matters" })">Succession</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Corporate -->
+                                        <div class="col">
+                                            <div class="mega-menu-card h-100 p-2">
+                                                <h6 class="fw-bold border-bottom pb-1 mb-1 d-flex justify-content-between align-items-center mega-category-header"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseCorporate"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseCorporate">
+                                                    <span><i class="bi bi-building me-1"></i> Corporate</span>
+                                                    <i class="bi bi-chevron-down d-lg-none mega-chevron"></i>
+                                                </h6>
+                                                <div id="collapseCorporate" class="collapse mega-collapse">
+                                                    <ul class="list-unstyled mb-0 pt-1 pt-lg-0">
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("corporate-contracts")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "corporate-contracts" })">Contracts</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("corporate-compliance")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "corporate-compliance" })">Compliance</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("corporate-recovery")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "corporate-recovery" })">Recovery</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("commercial-law")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "commercial-law" })">Commercial</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Arbitration -->
+                                        <div class="col">
+                                            <div class="mega-menu-card h-100 p-2">
+                                                <h6 class="fw-bold border-bottom pb-1 mb-1 d-flex justify-content-between align-items-center mega-category-header"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseArbitration"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseArbitration">
+                                                    <span><i class="bi bi-person-workspace me-1"></i> Arbitration</span>
+                                                    <i class="bi bi-chevron-down d-lg-none mega-chevron"></i>
+                                                </h6>
+                                                <div id="collapseArbitration" class="collapse mega-collapse">
+                                                    <ul class="list-unstyled mb-0 pt-1 pt-lg-0">
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("domestic-arbitration")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "domestic-arbitration" })">Domestic Arbitration</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("section-9-petition")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "section-9-petition" })">Section 9 Petition</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("section-11-petition")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "section-11-petition" })">Section 11 Petition</a></li>
+                                                        <li><a class="dropdown-item rounded py-1 @IsSlugActive("arbitration-award-challenge")" href="@Url.Action("PracticeArea", "Nav", new { area = "Client", slug = "arbitration-award-challenge" })">Award Challenge</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Client Portal Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                                Client Portal
+                            </a>
+                            <div class="dropdown-menu shadow-lg border-0 mt-0 p-3 p-lg-4 rounded-3 client-portal-menu">
+                                <div class="container-fluid p-0">
+                                    <div class="row row-cols-1 row-cols-md-2 g-2 g-md-3">
+                                        <div class="col">
+                                            <div class="mega-menu-card h-100 p-2">
+                                                <h6 class="fw-bold border-bottom pb-1 mb-1 d-flex justify-content-between align-items-center mega-category-header"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseRetainers"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseRetainers">
+                                                    <span><i class="bi bi-briefcase-fill me-1"></i> Retainers</span>
+                                                    <i class="bi bi-chevron-down d-lg-none mega-chevron"></i>
+                                                </h6>
+                                                <div id="collapseRetainers" class="collapse mega-collapse">
+                                                    <ul class="list-unstyled mb-0 pt-1 pt-lg-0">
+                                                        <li><a class="dropdown-item rounded py-1" href="@Url.Action("Dashboard", "ClientPortal", new { area = "Client", slug = "unlimited-consultation" })">Unlimited Consultation</a></li>
+                                                        <li><a class="dropdown-item rounded py-1" href="@Url.Action("Dashboard", "ClientPortal", new { area = "Client", slug = "contract-drafting" })">Contract Drafting</a></li>
+                                                        <li><a class="dropdown-item rounded py-1" href="@Url.Action("Dashboard", "ClientPortal", new { area = "Client", slug = "legal-notices" })">Legal Notices</a></li>
+                                                        <li><a class="dropdown-item rounded py-1" href="@Url.Action("Dashboard", "ClientPortal", new { area = "Client", slug = "contract-review" })">Contract Review</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="mega-menu-card h-100 p-2">
+                                                <h6 class="fw-bold border-bottom pb-1 mb-1 d-flex justify-content-between align-items-center mega-category-header"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseClientCorner"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseClientCorner">
+                                                    <span><i class="bi bi-person-workspace me-1"></i> Client Corner</span>
+                                                    <i class="bi bi-chevron-down d-lg-none mega-chevron"></i>
+                                                </h6>
+                                                <div id="collapseClientCorner" class="collapse mega-collapse">
+                                                    <ul class="list-unstyled mb-0 pt-1 pt-lg-0">
+                                                        <li><a class="dropdown-item rounded py-1" href="@Url.Action("Dashboard", "ClientPortal", new { area = "Client", slug = "case-timeline" })">Case Timeline</a></li>
+                                                        <li><a class="dropdown-item rounded py-1" href="@Url.Action("Dashboard", "ClientPortal", new { area = "Client", slug = "documents" })">Documents</a></li>
+                                                        <li><a class="dropdown-item rounded py-1" href="@Url.Action("Dashboard", "ClientPortal", new { area = "Client", slug = "appointment-booking" })">Appointment Booking</a></li>
+                                                        <li><a class="dropdown-item rounded py-1" href="@Url.Action("Dashboard", "ClientPortal", new { area = "Client", slug = "payments" })">Payments</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Insights & Opportunities Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                                Insights
+                            </a>
+                            <div class="dropdown-menu shadow-lg border-0 mt-0 p-3 p-lg-4 rounded-3 custom-dropdown-menu">
+                                <div class="container-fluid p-0">
+                                    <div class="row row-cols-1 row-cols-md-2 g-2 g-md-3">
+                                        <div class="col">
+                                            <div class="mega-menu-card h-100 p-2">
+                                                <h6 class="fw-bold border-bottom pb-1 mb-1 d-flex justify-content-between align-items-center mega-category-header"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseStudentsCorner"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseStudentsCorner">
+                                                    <span><i class="bi bi-mortarboard me-1"></i> Law Students Corner</span>
+                                                    <i class="bi bi-chevron-down d-lg-none mega-chevron"></i>
+                                                </h6>
+                                                <div id="collapseStudentsCorner" class="collapse mega-collapse">
+                                                    <ul class="list-unstyled mb-0 pt-1 pt-lg-0">
+                                                        <li><a class="dropdown-item rounded py-1" href="#">Article Publication</a></li>
+                                                        <li><a class="dropdown-item rounded py-1" href="#">Research Paper Publication</a></li>
+                                                        <li><a class="dropdown-item rounded py-1" href="#">Internship Opportunity</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col">
+                                            <div class="mega-menu-card h-100 p-2">
+                                                <h6 class="fw-bold border-bottom pb-1 mb-1 d-flex justify-content-between align-items-center mega-category-header"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseKnowledgeCorner"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseKnowledgeCorner">
+                                                    <span><i class="bi bi-lightbulb me-1"></i> Knowledge Corner</span>
+                                                    <i class="bi bi-chevron-down d-lg-none mega-chevron"></i>
+                                                </h6>
+                                                <div id="collapseKnowledgeCorner" class="collapse mega-collapse">
+                                                    <ul class="list-unstyled mb-0 pt-1 pt-lg-0">
+                                                        <li><a class="dropdown-item rounded py-1" href="#">How to get a Bail</a></li>
+                                                        <li><a class="dropdown-item rounded py-1" href="#">How to file a Writ Petition</a></li>
+                                                        <li><a class="dropdown-item rounded py-1" href="#">Rules in Service Law</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link @IsActive("Home", "CrisisSupport")" href="#">24*7 Crisis Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @IsActive("Account", "Login")" href="#">Login</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN BODY CONTENT -->
+    <main role="main" class="w-100 flex-grow-1">
+        @RenderBody()
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer mt-auto py-5 bg-dark text-white">
+        <div class="container-fluid px-2 px-md-3 px-xl-4">
+            <div class="row g-4 mb-4">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <h5 class="text-white fw-bold mb-3">ABOUT THE FIRM</h5>
+                    <p class="text-white-50 small">About company details and vision.</p>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3">
+                    <h5 class="text-white fw-bold mb-3">QUICK LINKS</h5>
+                    <ul class="list-unstyled footer-quick-links small mb-0">
+                        <li class="mb-2"><a href="@Url.Action("Index", "Home", new { area = "" })">Home</a></li>
+                        <li class="mb-2"><a href="@Url.Action("About", "Home", new { area = "" })">About Us</a></li>
+                        <li class="mb-2"><a href="@Url.Action("PracticeAreas", "Nav", new { area = "Client" })">Practice Areas</a></li>
+                        <li class="mb-2"><a href="#">Insights & Opportunities</a></li>
+                        <li class="mb-2"><a href="#">Careers</a></li>
+                        <li class="mb-2"><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3">
+                    <h5 class="text-white fw-bold mb-3">CONTACT US</h5>
+                    <address class="text-white-50 small mb-2 d-flex align-items-start">
+                        <i class="bi bi-geo-alt-fill text-white me-2 mt-1"></i>
+                        <div>
+                            <strong class="text-white">Office Address:</strong><br />
+                            123 High Court, Chandigarh City
+                        </div>
+                    </address>
+                    <p class="text-white-50 small mb-1"><i class="bi bi-telephone-fill me-2 text-white"></i><strong>Phone:</strong> +91 98765 43210</p>
+                    <p class="text-white-50 small mb-3"><i class="bi bi-envelope-fill me-2 text-white"></i><strong>Email:</strong> example.com</p>
+                    <a class="btn btn-outline-light btn-sm get-directionBtn" href="#">Get Directions</a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3">
+                    <h5 class="text-white fw-bold mb-3">LOCATION</h5>
+                    <p class="text-white-50 small mb-3">Find us at Punjab & Haryana High Court, Chandigarh.</p>
+
+                    <div class="map-container rounded overflow-hidden shadow-sm">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3428.6239196055644!2d76.80416017480854!3d30.75706377457255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed176393f21b%3A0xe3eebbc027d18810!2sPunjab%20and%20Haryana%20High%20Court%20Chandigarh!5e0!3m2!1sen!2sin!4v1785062131567!5m2!1sen!2sin"
+                                class="w-100 h-100 border-0"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="strict-origin-when-cross-origin">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider with Scale SVG -->
+            <div class="d-flex align-items-center my-4">
+                <div class="me-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="36" height="36">
+                        <g fill="none" stroke="#F9FAFB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(0, 2)">
+                            <polygon points="32,24 50,16 68,24" fill="#F9FAFB" fill-opacity="0.15" stroke-width="2" />
+                            <line x1="15" y1="32" x2="85" y2="32" stroke-width="3" />
+                            <circle cx="15" cy="32" r="1.5" fill="#F9FAFB" />
+                            <circle cx="85" cy="32" r="1.5" fill="#F9FAFB" />
+                            <line x1="50" y1="22" x2="50" y2="80" stroke-width="3.5" />
+                            <circle cx="50" cy="12" r="2.5" fill="#F9FAFB" />
+                            <line x1="40" y1="34" x2="40" y2="80" stroke-width="2" />
+                            <line x1="60" y1="34" x2="60" y2="80" stroke-width="2" />
+                            <line x1="15" y1="32" x2="5" y2="58" stroke-width="1.5" />
+                            <line x1="15" y1="32" x2="25" y2="58" stroke-width="1.5" />
+                            <path d="M 3 58 C 3 68, 27 68, 27 58 Z" fill="#F9FAFB" fill-opacity="0.25" stroke-width="2" />
+                            <line x1="85" y1="32" x2="75" y2="58" stroke-width="1.5" />
+                            <line x1="85" y1="32" x2="95" y2="58" stroke-width="1.5" />
+                            <path d="M 73 58 C 73 68, 97 68, 97 58 Z" fill="#F9FAFB" fill-opacity="0.25" stroke-width="2" />
+                            <path d="M 26 80 L 74 80" stroke-width="4" />
+                            <path d="M 20 86 L 80 86" stroke-width="5" />
+                        </g>
+                    </svg>
+                </div>
+                <hr class="flex-grow-1 border-secondary m-0" />
+            </div>
+
+            <!-- Footer Bottom Note -->
+            <div class="text-center pt-2">
+                <p class="text-white-50 mb-2 small">&copy; @DateTime.Now.Year AdvocateWebApp | High Court Lawyers. All rights reserved.</p>
+                <div class="mb-2 footerSocialIcons">
+                    <a href="#" class="me-3 fs-5" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="me-3 fs-5" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="fs-5" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                </div>
+                <p class="text-white-50 mb-0" style="font-size: 0.75rem;">
+                    Attorney Advertising. Prior results do not guarantee a similar outcome. The information on this website is for general informational purposes only and does not constitute legal advice.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- REQUIRED SCRIPTS -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

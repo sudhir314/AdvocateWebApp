@@ -1,0 +1,527 @@
+/* ==========================================================================
+   1. GLOBAL RESET & TYPOGRAPHY ANTI-ALIASING
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* ==========================================================================
+   2. ROOT VARIABLES (Legal Luxury & High-Trust Palette)
+   ========================================================================== */
+:root {
+    /* Legal Theme Colors */
+    --bg-main: #F8FAFC;          /* Soft Formal Off-White */
+    --text-main: #1E293B;        /* Professional Slate Dark Charcoal */
+    --heading-dark: #0F172A;     /* High-Contrast Deep Navy/Black */
+    --accent-color: #1E293B;     /* Deep Slate Gray */
+    --accent-light: #64748B;     /* Muted Legal Border/Icon Gray */
+    --accent-gold: #C5A880;      /* Premium Legal Brass/Gold Accent */
+    --accent-hover: #0F172A;     /* Dark Hover Slate */
+    --header-footer-bg: #0E1726; /* Deep Legal Navy/Midnight Header & Footer */
+    --card-bg: #FFFFFF;
+    --border-light: #E2E8F0;
+
+    /* Typography Systems */
+    --font-heading: 'Playfair Display', 'Cinzel', Georgia, serif;
+    --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+    /* Font Weights */
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /* Line Heights */
+    --lh-tight: 1.25;
+    --lh-heading: 1.3;
+    --lh-base: 1.65;
+    --lh-legal: 1.75;
+
+    /* Letter Spacing */
+    --ls-heading: 0.5px;
+    --ls-brand: 1.2px;
+}
+
+/* ==========================================================================
+   3. BASE LAYOUT & TYPOGRAPHY STYLES
+   ========================================================================== */
+html {
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-base);
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-size: 0.9375rem;
+}
+
+body > div.container-fluid,
+main[role="main"] {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Legal Headings System */
+h1, h2, h3, h4, h5, h6, .page-title-text {
+    font-family: var(--font-heading);
+    font-weight: var(--fw-bold);
+    color: var(--heading-dark);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+}
+
+/* Legal Paragraphs & Long Text */
+p, .crisp-text, .lead-description {
+    line-height: var(--lh-legal);
+    color: #334155;
+}
+
+.lead-description {
+    font-size: 1.05rem;
+    font-weight: var(--fw-regular);
+}
+
+/* ==========================================================================
+   4. FORM CONTROLS & BUTTONS
+   ========================================================================== */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem #FFFFFF, 0 0 0 0.25rem var(--accent-gold);
+}
+
+.btn-primary,
+.get-directionBtn {
+    font-family: var(--font-body);
+    font-weight: var(--fw-semibold);
+    background-color: var(--accent-color) !important;
+    color: #FFFFFF !important;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 4px;
+}
+
+.btn-primary:hover,
+.get-directionBtn:hover {
+    background-color: var(--accent-gold) !important;
+    color: #0E1726 !important;
+}
+
+/* ==========================================================================
+   5. HEADER & NAVIGATION
+   ========================================================================== */
+header nav.navColor,
+.navColor,
+footer,
+footer.footer,
+.navbar-dark,
+.bg-dark {
+    background-color: var(--header-footer-bg) !important;
+}
+
+header nav.navColor {
+    padding-top: 0.8rem !important;
+    padding-bottom: 0.8rem !important;
+    min-height: 65px;
+    border-bottom: 1px solid rgba(197, 168, 128, 0.2);
+}
+
+.navbar-brand {
+    font-family: var(--font-heading);
+    font-weight: var(--fw-bold);
+    font-size: 1.45rem;
+    letter-spacing: var(--ls-brand);
+    color: #FFFFFF !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: var(--accent-gold) !important;
+}
+
+.nav-link {
+    font-family: var(--font-body);
+    font-weight: var(--fw-medium);
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    color: #F1F5F9 !important;
+    margin-right: 18px;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    transition: color 0.2s ease;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-gold) !important;
+    font-weight: var(--fw-semibold);
+}
+
+/* ==========================================================================
+   6. DROPDOWN & MEGA MENU STYLES
+   ========================================================================== */
+.dropdown-menu {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-light);
+    margin-top: 6px !important;
+}
+
+.dropdown-menu .dropdown-item,
+.mega-menu .dropdown-item {
+    font-family: var(--font-body);
+    font-size: 0.85rem !important;
+    line-height: var(--lh-base);
+    font-weight: var(--fw-medium);
+    color: var(--heading-dark);
+    padding: 6px 10px !important;
+    border-left: 2px solid transparent;
+    transition: all 0.15s ease-in-out;
+    white-space: normal !important;
+    word-wrap: break-word;
+    width: 100% !important;
+    border-radius: 4px;
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item.active,
+.mega-menu .dropdown-item.active {
+    background-color: #F8FAFC !important;
+    color: var(--heading-dark) !important;
+    border-left: 3px solid var(--accent-gold) !important;
+    padding-left: 14px !important;
+    font-weight: var(--fw-semibold);
+}
+
+.navbar .position-static {
+    position: static !important;
+}
+
+.mega-menu {
+    left: 0 !important;
+    right: 0 !important;
+    top: 100%;
+    background-color: var(--card-bg);
+    border-top: 3px solid var(--accent-gold);
+}
+
+.custom-dropdown-menu h6,
+.mega-menu h6 {
+    font-family: var(--font-heading);
+    font-size: 0.95rem !important;
+    font-weight: var(--fw-bold);
+    letter-spacing: 0.4px;
+    color: var(--heading-dark);
+    margin-bottom: 6px !important;
+    padding-bottom: 4px !important;
+}
+
+.mega-menu-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    padding: 10px 12px !important;
+    overflow: hidden !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* ==========================================================================
+   7. SIDEBAR NAVIGATION
+   ========================================================================== */
+.sidebar-scrollable {
+    max-height: 85vh;
+    overflow-y: auto;
+    position: sticky;
+    top: 20px;
+}
+
+.sidebar-item {
+    font-family: var(--font-body);
+    font-weight: var(--fw-medium);
+    font-size: 0.92rem;
+    color: #334155 !important;
+    line-height: var(--lh-tight);
+    transition: all 0.15s ease-in-out;
+    border-left: 4px solid transparent !important;
+}
+
+.sidebar-item:hover {
+    background-color: #F1F5F9 !important;
+    color: var(--text-main) !important;
+    border-left-color: var(--accent-gold) !important;
+    padding-left: 14px !important;
+}
+
+.active-sidebar-item {
+    background-color: #E2E8F0 !important;
+    color: var(--heading-dark) !important;
+    font-weight: var(--fw-bold) !important;
+    border-left: 4px solid var(--accent-gold) !important;
+    padding-left: 14px !important;
+}
+
+/* ==========================================================================
+   8. FOOTER STYLES & SOCIAL HOVER FIX
+   ========================================================================== */
+footer {
+    font-family: var(--font-body);
+    color: #F8FAFC;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid rgba(197, 168, 128, 0.2);
+}
+
+footer h3, footer h4, footer h5 {
+    font-family: var(--font-heading);
+    letter-spacing: var(--ls-heading);
+    color: #FFFFFF;
+}
+
+footer ul li a,
+.footer-quick-links li a {
+    text-decoration: none;
+    color: #94A3B8 !important;
+    line-height: 1.8;
+    transition: color 0.2s ease;
+}
+
+footer ul li a:hover,
+.footer-quick-links li a:hover {
+    color: var(--accent-gold) !important;
+    text-decoration: underline !important;
+}
+
+/* Fixed Social Icons Hover */
+.footerSocialIcons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-gold) !important;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s ease;
+    text-decoration: none !important;
+}
+
+.footerSocialIcons a i {
+    color: inherit !important;
+    transition: transform 0.25s ease;
+}
+
+.footerSocialIcons a:hover {
+    color: #FFFFFF !important;
+    transform: translateY(-4px) scale(1.15);
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgba(197, 168, 128, 0.3);
+    background-color: #0E1726;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+}
+
+/* ==========================================================================
+   9. RESPONSIVE DESKTOP RULES (>= 992px)
+   ========================================================================== */
+@media (min-width: 992px) {
+    .custom-dropdown-menu,
+    .client-portal-menu {
+        width: 520px !important;
+        min-width: 520px !important;
+        max-width: 90vw;
+        left: 50% !important;
+        transform: translateX(-50%);
+        right: auto !important;
+    }
+
+    .mega-menu {
+        padding: 14px 20px !important;
+    }
+
+    .mega-collapse {
+        display: block !important;
+        height: auto !important;
+        visibility: visible !important;
+    }
+
+    .mega-category-header {
+        cursor: default;
+    }
+
+    .mega-menu-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+        border-color: var(--accent-gold);
+    }
+}
+
+/* ==========================================================================
+   10. RESPONSIVE MOBILE RULES (< 992px) & DROPDOWN HEIGHT FIX
+   ========================================================================== */
+@media (max-width: 991.88px) {
+    header nav.navColor {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+        min-height: 60px;
+    }
+
+    .navbar-toggler,
+    .user-avatar {
+        z-index: 1060;
+    }
+
+    .custom-brand-center {
+        position: absolute !important;
+        left: 50% !important;
+        top: 22px !important;
+        transform: translate(-50%, -50%) !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: auto !important;
+        text-align: center !important;
+        line-height: 1 !important;
+        z-index: 1060;
+        white-space: nowrap;
+    }
+
+    #navbarNav {
+        width: 100% !important;
+        margin-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 15px;
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+
+    /* Mobile Dropdowns Height Reduced & Scroll Smoothed */
+    .custom-dropdown-menu,
+    .client-portal-menu,
+    .mega-menu {
+        width: 100% !important;
+        min-width: 0 !important;
+        transform: none !important;
+        left: 0 !important;
+        max-height: 42vh !important; /* Decreased height for compact view */
+        overflow-y: auto !important;
+        padding: 0.5rem !important;
+        background-color: #FFFFFF !important;
+        border: 1px solid var(--border-light) !important;
+        border-radius: 8px !important;
+        margin-top: 4px !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .mega-menu-card {
+        width: 100% !important;
+        padding: 0.5rem 0.6rem !important;
+        box-shadow: none !important;
+        background-color: #FFFFFF !important;
+        border: 1px solid #E2E8F0 !important;
+        border-radius: 6px !important;
+        margin-bottom: 0.35rem;
+    }
+
+    .mega-category-header {
+        cursor: pointer;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        margin-bottom: 0 !important;
+        user-select: none;
+        border-bottom: 0 !important;
+        font-size: 0.9rem;
+    }
+
+    .mega-category-header[aria-expanded="true"] {
+        border-bottom: 1px solid var(--border-light) !important;
+        padding-bottom: 4px;
+        margin-bottom: 4px !important;
+    }
+
+    .mega-chevron {
+        transition: transform 0.3s ease;
+        font-size: 0.8rem;
+    }
+
+    .mega-category-header[aria-expanded="true"] .mega-chevron {
+        transform: rotate(180deg);
+    }
+
+    .mega-collapse .dropdown-item {
+        padding: 4px 8px !important;
+        font-size: 0.85rem;
+        color: #334155 !important;
+        border-radius: 4px;
+    }
+
+    .sidebar-scrollable {
+        max-height: 50vh;
+        position: static;
+    }
+}
+
+/* Mobile Specific Footer Padding Adjustment */
+@media (max-width: 767.98px) {
+    footer.footer .container-fluid {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+
+/* ==========================================================================
+   11. PRACTICE AREA BANNER HEIGHT & MOBILE DISPLAY FIX
+   ========================================================================== */
+.banner-wrapper {
+    width: 100% !important;
+    height: 250px !important;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f8fafc;
+    display: block !important;
+}
+
+.banner-img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+}
+
+@media (max-width: 767.98px) {
+    .banner-wrapper {
+        height: 180px !important;
+        min-height: 180px !important;
+    }
+}

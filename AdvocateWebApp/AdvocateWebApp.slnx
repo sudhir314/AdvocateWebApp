@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="AdvocateWebApp/AdvocateWebApp.csproj" />
+  <Project Path="Data/DataAccess.csproj" Id="95152e72-d4ad-4641-94a6-6a1b2781dcd0" />
+  <Project Path="Models/Models.csproj" Id="fda04832-6526-45c0-b6eb-018d264f5ce1" />
+  <Project Path="Utility/Utility.csproj" Id="c9c6427a-fc33-453f-ac0c-882bab933429" />
+</Solution>

@@ -1,0 +1,148 @@
+﻿@model AdvocateWebApp.Models.PracticeAreaService
+
+@{
+    ViewData["Title"] = Model?.MetaTitle ?? Model?.Title ?? "Practice Area";
+}
+
+<div class="container-fluid px-1 px-md-3 my-3">
+    <div class="row g-3">
+
+        <!-- LEFT SIDEBAR: Mobile Collapsible Dropdown & Desktop Sidebar -->
+        <aside class="col-12 col-md-4 col-lg-3">
+            <div class="card border-0 shadow-sm rounded-3 p-3 bg-white sidebar-card">
+
+                <!-- Mobile Only: Toggle Button -->
+                <div class="d-md-none">
+                    <button class="btn btn-outline-dark w-100 d-flex align-items-center justify-content-between sidebar-toggle-btn collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#sidebarPracticeAreas"
+                            aria-expanded="false"
+                            aria-controls="sidebarPracticeAreas">
+                        <span class="fw-semibold text-truncate me-2">
+                            <i class="bi bi-grid-fill me-2 text-primary"></i>
+                            @(Model?.Title ?? "Select Practice Area")
+                        </span>
+                        <i class="bi bi-chevron-down sidebar-chevron"></i>
+                    </button>
+                </div>
+
+                <!-- Practice Areas Menu -->
+                <div class="collapse d-md-block sidebar-scrollable mt-3 mt-md-0" id="sidebarPracticeAreas">
+                    @if (ViewBag.AllServices is IEnumerable<AdvocateWebApp.Models.PracticeAreaService> allServices && allServices.Any())
+                    {
+                        var groupedServices = allServices.GroupBy(s => s.CategoryName ?? "General");
+
+                        foreach (var categoryGroup in groupedServices)
+                        {
+                            <div class="mb-3">
+                                <h6 class="fw-bold text-dark border-bottom pb-2 mb-2 fs-6">
+                                    @categoryGroup.Key
+                                </h6>
+                                <div class="list-group list-group-flush">
+                                    @foreach (var item in categoryGroup)
+                                    {
+                                        bool isActive = string.Equals(Model?.Slug, item.Slug, StringComparison.OrdinalIgnoreCase);
+
+                                        <a asp-area="Client"
+                                           asp-controller="Nav"
+                                           asp-action="PracticeArea"
+                                           asp-route-slug="@item.Slug"
+                                           class="list-group-item list-group-item-action border-0 py-2 px-3 rounded mb-1 sidebar-item @(isActive ? "active-sidebar-item" : "")">
+                                            @item.Title
+                                        </a>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <p class="text-muted small mb-0 py-2">No practice areas available.</p>
+                    }
+                </div>
+
+            </div>
+        </aside>
+
+        <!-- RIGHT MAIN CONTENT: Dynamic Details -->
+        <main class="col-12 col-md-8 col-lg-9">
+            <div class="card border-0 shadow-sm rounded-3 p-3 p-md-4 bg-white">
+
+                <!-- Banner Image Container (Optimized for Mobile & Desktop) -->
+                <div class="mb-4 bg-light text-center banner-wrapper shadow-sm rounded-3">
+                    @if (!string.IsNullOrWhiteSpace(Model?.BannerImageUrl))
+                    {
+                        <img src="@Model.BannerImageUrl" class="banner-img" alt="@(Model?.Title ?? "Practice Area") Banner" />
+                    }
+                    else
+                    {
+                        <div class="d-flex align-items-center justify-content-center text-muted border border-2 border-dashed rounded h-100 py-4">
+                            <span class="fw-medium"><i class="bi bi-image me-2"></i>Banner Image Not Available</span>
+                        </div>
+                    }
+                </div>
+
+                <!-- Main Content Area & Call-To-Action Side Section -->
+                <div class="row g-4">
+
+                    <!-- Main Text Body -->
+                    <div class="col-12 col-xl-8">
+                        <h1 class="fw-bold text-dark mb-3 page-title-text fs-2">
+                            @(Model?.Title ?? "Practice Area Details")
+                        </h1>
+
+                        @if (!string.IsNullOrWhiteSpace(Model?.ShortDescription))
+                        {
+                            <div class="text-dark mb-4 lead-description">
+                                <p class="lead fs-6 mb-0 text-secondary fw-normal">@Model.ShortDescription</p>
+                            </div>
+                        }
+
+                        <div class="content-body text-dark mb-4 crisp-text">
+                            @if (!string.IsNullOrWhiteSpace(Model?.FullContent))
+                            {
+                                @Html.Raw(Model.FullContent)
+                            }
+                            else
+                            {
+                                <p class="text-muted fst-italic">Detailed content will be uploaded soon.</p>
+                            }
+                        </div>
+                    </div>
+
+                    <!-- Call-To-Action Box -->
+                    <div class="col-12 col-xl-4">
+                        <div class="mb-2 text-xl-end fw-semibold text-muted small">
+                            @(Model?.Title)
+                        </div>
+
+                        <div class="card border border-dark rounded-3 p-3 bg-light shadow-sm">
+                            <h5 class="fw-bold text-dark mb-3">Call-to-action</h5>
+
+                            @if (!string.IsNullOrWhiteSpace(Model?.PDFDocumentUrl))
+                            {
+                                <a href="@Model.PDFDocumentUrl" target="_blank" class="btn btn-outline-dark w-100 mb-2 text-start text-truncate fw-medium">
+                                    <i class="bi bi-file-earmark-pdf-fill me-2 text-danger"></i> Related Documents (PDF)
+                                </a>
+                            }
+                            else
+                            {
+                                <button class="btn btn-outline-dark w-100 mb-2 text-start text-muted" disabled>
+                                    <i class="bi bi-file-earmark-pdf me-2"></i> Related Documents (PDF)
+                                </button>
+                            }
+
+                            <a asp-area="Client" asp-controller="Home" asp-action="Contact" class="btn btn-dark w-100 text-start fw-medium">
+                                <i class="bi bi-person-lines-fill me-2"></i> Contact Advocate
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+</div>
