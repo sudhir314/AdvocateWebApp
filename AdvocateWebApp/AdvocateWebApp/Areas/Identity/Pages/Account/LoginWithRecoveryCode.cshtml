@@ -1,26 +1,71 @@
 @page
 @model LoginWithRecoveryCodeModel
 @{
-    ViewData["Title"] = "Recovery code verification";
+    ViewData["Title"] = "Recovery Code Verification - Advocate Portal";
 }
 
-<h1>@ViewData["Title"]</h1>
-<hr />
-<p>
-    You have requested to log in with a recovery code. This login will not be remembered until you provide
-    an authenticator app code at log in or disable 2FA and log in again.
-</p>
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.RecoveryCode" class="form-control" autocomplete="off" placeholder="RecoveryCode" />
-                <label asp-for="Input.RecoveryCode" class="form-label"></label>
-                <span asp-validation-for="Input.RecoveryCode" class="text-danger"></span>
+<div class="container py-5 my-auto">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-10 col-lg-8 col-xl-6">
+            <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+
+                <!-- Card Header with Legal Theme -->
+                <div class="card-header bg-dark text-white text-center py-4 px-3 position-relative" style="background-color: var(--accent-color, #1a2530) !important;">
+                    <div class="mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="42" height="42">
+                            <g fill="none" stroke="#F9FAFB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(0, 2)">
+                                <polygon points="32,24 50,16 68,24" fill="#F9FAFB" fill-opacity="0.15" stroke-width="2" />
+                                <line x1="15" y1="32" x2="85" y2="32" stroke-width="3" />
+                                <circle cx="15" cy="32" r="1.5" fill="#F9FAFB" />
+                                <circle cx="85" cy="32" r="1.5" fill="#F9FAFB" />
+                                <line x1="50" y1="22" x2="50" y2="80" stroke-width="3.5" />
+                                <circle cx="50" cy="12" r="2.5" fill="#F9FAFB" />
+                                <line x1="40" y1="34" x2="40" y2="80" stroke-width="2" />
+                                <line x1="60" y1="34" x2="60" y2="80" stroke-width="2" />
+                                <line x1="15" y1="32" x2="5" y2="58" stroke-width="1.5" />
+                                <line x1="15" y1="32" x2="25" y2="58" stroke-width="1.5" />
+                                <path d="M 3 58 C 3 68, 27 68, 27 58 Z" fill="#F9FAFB" fill-opacity="0.25" stroke-width="2" />
+                                <line x1="85" y1="32" x2="75" y2="58" stroke-width="1.5" />
+                                <line x1="85" y1="32" x2="95" y2="58" stroke-width="1.5" />
+                                <path d="M 73 58 C 73 68, 97 68, 97 58 Z" fill="#F9FAFB" fill-opacity="0.25" stroke-width="2" />
+                                <path d="M 26 80 L 74 80" stroke-width="4" />
+                                <path d="M 20 86 L 80 86" stroke-width="5" />
+                            </g>
+                        </svg>
+                    </div>
+                    <h2 class="fw-bold font-playfair mb-1 text-white" style="font-family: 'Playfair Display', serif;">Recovery Code Login</h2>
+                    <p class="text-white-50 small mb-0">High Court Legal Portal Emergency Access</p>
+                </div>
+
+                <!-- Card Body -->
+                <div class="card-body p-4 p-md-5 bg-white">
+                    <p class="text-muted small text-center mb-4">
+                        You have requested to log in with a recovery code. This login will not be remembered until you provide an authenticator app code at log in or disable 2FA and log in again.
+                    </p>
+
+                    <form method="post">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger py-2 small mb-3 text-center" role="alert"></div>
+
+                        <div class="form-floating mb-4">
+                            <input asp-for="Input.RecoveryCode" class="form-control rounded-3 text-center fs-5 fw-bold" autocomplete="off" placeholder="RecoveryCode" />
+                            <label asp-for="Input.RecoveryCode" class="text-muted"><i class="bi bi-key me-1"></i> Enter Recovery Code</label>
+                            <span asp-validation-for="Input.RecoveryCode" class="text-danger small"></span>
+                        </div>
+
+                        <div class="d-grid mb-3">
+                            <button type="submit" class="btn btn-primary btn-lg rounded-3 fw-bold py-3 shadow-sm" style="background-color: var(--accent-color, #1a2530); border-color: var(--accent-color, #1a2530);">
+                                <i class="bi bi-box-arrow-in-right me-2"></i> Log In with Recovery Code
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <button type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
-        </form>
+
+            <!-- Security Notice Footer -->
+            <div class="text-center mt-3 text-muted" style="font-size: 0.75rem;">
+                <i class="bi bi-shield-lock-fill text-success me-1"></i> Secure High Court Emergency Authentication Gateway
+            </div>
+        </div>
     </div>
 </div>
 

@@ -1,57 +1,158 @@
 @page
-@model RegisterModel
+@model AdvocateWebApp.Areas.Identity.Pages.Account.RegisterModel
 @{
-    ViewData["Title"] = "Register";
+    ViewData["Title"] = "Advocate Secure Registration & Consultation";
 }
 
-<div class="container my-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6 col-lg-5">
-            <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5 bg-white">
+<div class="container py-2 my-auto">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-12 col-lg-8 col-xl-9">
+            <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
 
-                <!-- Header Icon & Title -->
-                <div class="text-center mb-4">
-                    <div class="inline-block p-3 bg-light rounded-circle text-primary mb-2 shadow-sm" style="width: 60px; height: 60px; display: inline-flex; align-items: center; justify-content: center;">
-                        <i class="bi bi-person-plus-fill fs-3 text-dark"></i>
+                <!-- Card Header with Legal Theme -->
+                <div class="card-header bg-dark text-white text-center py-4 px-3 position-relative" style="background-color: var(--accent-color, #1a2530) !important;">
+                    <div class="mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="42" height="42">
+                            <g fill="none" stroke="#F9FAFB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(0, 2)">
+                                <polygon points="32,24 50,16 68,24" fill="#F9FAFB" fill-opacity="0.15" stroke-width="2" />
+                                <line x1="15" y1="32" x2="85" y2="32" stroke-width="3" />
+                                <circle cx="15" cy="32" r="1.5" fill="#F9FAFB" />
+                                <circle cx="85" cy="32" r="1.5" fill="#F9FAFB" />
+                                <line x1="50" y1="22" x2="50" y2="80" stroke-width="3.5" />
+                                <circle cx="50" cy="12" r="2.5" fill="#F9FAFB" />
+                                <line x1="40" y1="34" x2="40" y2="80" stroke-width="2" />
+                                <line x1="60" y1="34" x2="60" y2="80" stroke-width="2" />
+                                <line x1="15" y1="32" x2="5" y2="58" stroke-width="1.5" />
+                                <line x1="15" y1="32" x2="25" y2="58" stroke-width="1.5" />
+                                <path d="M 3 58 C 3 68, 27 68, 27 58 Z" fill="#F9FAFB" fill-opacity="0.25" stroke-width="2" />
+                                <line x1="85" y1="32" x2="75" y2="58" stroke-width="1.5" />
+                                <line x1="85" y1="32" x2="95" y2="58" stroke-width="1.5" />
+                                <path d="M 73 58 C 73 68, 97 68, 97 58 Z" fill="#F9FAFB" fill-opacity="0.25" stroke-width="2" />
+                                <path d="M 26 80 L 74 80" stroke-width="4" />
+                                <path d="M 20 86 L 80 86" stroke-width="5" />
+                            </g>
+                        </svg>
                     </div>
-                    <h2 class="fw-bold text-dark">Create Account</h2>
-                    <p class="text-muted small">Join our client portal to track your legal cases.</p>
+                    <h2 class="fw-bold font-playfair mb-1 text-white" style="font-family: 'Playfair Display', serif;">Client Registration & Consultation</h2>
+                    <p class="text-white-50 small mb-0">Create your portal account and submit your case brief</p>
                 </div>
 
-                <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-                    <div asp-validation-summary="ModelOnly" class="text-danger small mb-3 text-center" role="alert"></div>
+                <!-- Card Body -->
+                <div class="card-body p-4 p-md-5 bg-white">
+                    <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger py-2 small mb-3 text-center" role="alert"></div>
 
-                    <div class="form-floating mb-3">
-                        <input asp-for="Input.Email" class="form-control rounded-3" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                        <label asp-for="Input.Email" class="text-muted">Email Address</label>
-                        <span asp-validation-for="Input.Email" class="text-danger small"></span>
-                    </div>
+                        <h6 class="text-uppercase text-muted fw-bold mb-3 fs-7 border-bottom pb-2">
+                            <i class="bi bi-person-badge me-1"></i> Personal & Contact Information
+                        </h6>
 
-                    <div class="form-floating mb-3">
-                        <input asp-for="Input.Password" class="form-control rounded-3" autocomplete="new-password" aria-required="true" placeholder="password" />
-                        <label asp-for="Input.Password" class="text-muted">Password</label>
-                        <span asp-validation-for="Input.Password" class="text-danger small"></span>
-                    </div>
+                        <div class="row g-2 mb-3">
+                            <!-- Full Name -->
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <input asp-for="Input.FullName" class="form-control rounded-3" autocomplete="name" aria-required="true" placeholder="John Doe" />
+                                    <label asp-for="Input.FullName" class="text-muted"><i class="bi bi-person me-1"></i> Full Name</label>
+                                    <span asp-validation-for="Input.FullName" class="text-danger small"></span>
+                                </div>
+                            </div>
 
-                    <div class="form-floating mb-4">
-                        <input asp-for="Input.ConfirmPassword" class="form-control rounded-3" autocomplete="new-password" aria-required="true" placeholder="password" />
-                        <label asp-for="Input.ConfirmPassword" class="text-muted">Confirm Password</label>
-                        <span asp-validation-for="Input.ConfirmPassword" class="text-danger small"></span>
-                    </div>
+                            <!-- Email Address -->
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input asp-for="Input.Email" class="form-control rounded-3" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                                    <label asp-for="Input.Email" class="text-muted"><i class="bi bi-envelope me-1"></i> Email</label>
+                                    <span asp-validation-for="Input.Email" class="text-danger small"></span>
+                                </div>
+                            </div>
 
-                    <button id="registerSubmit" type="submit" class="w-100 btn btn-dark btn-lg rounded-3 fw-medium shadow-sm py-2">
-                        Register Account <i class="bi bi-arrow-right ms-2"></i>
-                    </button>
-                </form>
+                            <!-- Phone Number -->
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input asp-for="Input.PhoneNumber" class="form-control rounded-3" autocomplete="tel" aria-required="true" placeholder="+91 9876543210" />
+                                    <label asp-for="Input.PhoneNumber" class="text-muted"><i class="bi bi-telephone me-1"></i> Phone</label>
+                                    <span asp-validation-for="Input.PhoneNumber" class="text-danger small"></span>
+                                </div>
+                            </div>
+                        </div>
 
-                <!-- Footer Link for Login -->
-                <div class="text-center mt-4 pt-3 border-top">
-                    <p class="text-muted small mb-0">
-                        Already have an account?
-                        <a asp-area="Identity" asp-page="/Account/Login" class="text-decoration-none fw-semibold text-dark">Login here</a>
-                    </p>
+                        <h6 class="text-uppercase text-muted fw-bold mb-3 mt-4 fs-7 border-bottom pb-2">
+                            <i class="bi bi-file-earmark-text me-1"></i> Matter Details & Initial Query
+                        </h6>
+
+                        <div class="row g-2 mb-3">
+                            <!-- Case / Practice Area Dropdown -->
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <select asp-for="Input.CaseType" class="form-select rounded-3" aria-required="true">
+                                        <option value="">-- Select Practice Area / Matter Type --</option>
+                                        <option value="Criminal Matters">Criminal Matters (Bail / Trial / Appeal / Quashing)</option>
+                                        <option value="Civil Matters">Civil Matters (Recovery / Partition / Injunction)</option>
+                                        <option value="Constitutional Law">Constitutional Law (Writs / PIL)</option>
+                                        <option value="Family Law">Family Law (Divorce / Custody / Maintenance)</option>
+                                        <option value="Corporate & Commercial">Corporate & Commercial Law</option>
+                                        <option value="Service & Labor Law">Service & Labor Law (ACP / MACP / Departmental)</option>
+                                        <option value="Arbitration">Arbitration & Dispute Resolution</option>
+                                    </select>
+                                    <label asp-for="Input.CaseType" class="text-muted"><i class="bi bi-briefcase me-1"></i> Matter / Practice Area</label>
+                                    <span asp-validation-for="Input.CaseType" class="text-danger small"></span>
+                                </div>
+                            </div>
+
+                            <!-- Initial Legal Query / Description -->
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <textarea asp-for="Input.InitialQuery" class="form-control rounded-3" style="height: 90px" placeholder="Describe your legal matter..."></textarea>
+                                    <label asp-for="Input.InitialQuery" class="text-muted"><i class="bi bi-chat-left-text me-1"></i> Initial Legal Query / Matter Details</label>
+                                    <span asp-validation-for="Input.InitialQuery" class="text-danger small"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h6 class="text-uppercase text-muted fw-bold mb-3 mt-4 fs-7 border-bottom pb-2">
+                            <i class="bi bi-shield-lock me-1"></i> Set Account Credentials
+                        </h6>
+
+                        <div class="row g-2 mb-4">
+                            <!-- Password -->
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input asp-for="Input.Password" class="form-control rounded-3" autocomplete="new-password" aria-required="true" placeholder="password" />
+                                    <label asp-for="Input.Password" class="text-muted"><i class="bi bi-lock me-1"></i> Password</label>
+                                    <span asp-validation-for="Input.Password" class="text-danger small"></span>
+                                </div>
+                            </div>
+
+                            <!-- Confirm Password -->
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input asp-for="Input.ConfirmPassword" class="form-control rounded-3" autocomplete="new-password" aria-required="true" placeholder="password" />
+                                    <label asp-for="Input.ConfirmPassword" class="text-muted"><i class="bi bi-lock-fill me-1"></i> Confirm</label>
+                                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger small"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid mb-3">
+                            <button id="registerSubmit" type="submit" class="btn btn-primary btn-lg rounded-3 fw-bold py-3 shadow-sm" style="background-color: var(--accent-color, #1a2530); border-color: var(--accent-color, #1a2530);">
+                                <i class="bi bi-person-plus-fill me-2"></i> Register & Submit Case Query
+                            </button>
+                        </div>
+
+                        <!-- Footer Link for Login -->
+                        <div class="text-center border-top pt-3 small text-muted">
+                            <p class="mb-0">
+                                Already have an active portal account?
+                                <a asp-area="Identity" asp-page="/Account/Login" class="text-decoration-none fw-semibold text-primary">Login here</a>
+                            </p>
+                        </div>
+                    </form>
                 </div>
+            </div>
 
+            <!-- Security Notice Footer -->
+            <div class="text-center mt-3 text-muted" style="font-size: 0.75rem;">
+                <i class="bi bi-shield-lock-fill text-success me-1"></i> Secure High Court Client Onboarding & Consultation Portal
             </div>
         </div>
     </div>

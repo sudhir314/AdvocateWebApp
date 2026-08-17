@@ -1,4 +1,8 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Identity
+@inject UserManager<ApplicationUser> UserManager
+@using AdvocateWebApp.DataAccess.Data
+
+@{
     // Current Controller & Action route detect karne ke liye
     string currentController = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
     string currentAction = ViewContext.RouteData.Values["action"]?.ToString() ?? "";
@@ -18,6 +22,21 @@
         var currentSlug = !string.IsNullOrEmpty(routeValue) ? routeValue : queryValue;
 
         return string.Equals(currentSlug, slug, StringComparison.OrdinalIgnoreCase) ? "active" : "";
+    }
+
+    // Fetch current logged-in user's full name from database if authenticated
+    string userFullName = "";
+    if (User.Identity?.IsAuthenticated == true)
+    {
+        var appUser = await UserManager.GetUserAsync(User);
+        if (appUser != null && !string.IsNullOrEmpty(appUser.FullName))
+        {
+            userFullName = appUser.FullName;
+        }
+        else if (!string.IsNullOrEmpty(User.Identity.Name))
+        {
+            userFullName = User.Identity.Name;
+        }
     }
 }
 
@@ -56,9 +75,26 @@
                     <span>AdvocateWebApp</span>
                 </a>
 
-                <!-- 3. User Avatar Letter -->
-                <div class="user-avatar order-3 rounded-circle text-white d-flex align-items-center justify-content-center fw-bold ms-auto ms-lg-2 me-0 me-lg-2" style="width: 36px; height: 36px; background-color: var(--accent-color, #1a2530);">
-                    @(User.Identity?.IsAuthenticated == true ? User.Identity.Name?[0].ToString().ToUpper() : "P")
+                <!-- 3. User Full Name Dropdown (Shows only when logged in, empty/hidden when logged out) -->
+                <div class="order-3 ms-auto ms-lg-2 me-0 me-lg-2">
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
+                        <div class="dropdown">
+                            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle text-white fw-semibold px-2 py-1 rounded" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: var(--accent-color, #1a2530);">
+                                <i class="bi bi-person-fill me-1"></i> @userFullName
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 py-2" aria-labelledby="userDropdown">
+                                <li><span class="dropdown-item-text text-muted small fw-semibold border-bottom pb-1 mb-1">Signed in as<br /><strong class="text-dark">@userFullName</strong></span></li>
+                               
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <form class="form-inline px-2" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                        <button type="submit" class="dropdown-item py-1 text-danger w-100 text-start bg-transparent border-0"><i class="bi bi-box-arrow-right me-2"></i> Logout</button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    }
                 </div>
 
                 <!-- 4. Nav Menu Items -->
@@ -296,7 +332,7 @@
                             </div>
                         </li>
 
-                        <!-- Insights & Opportunities Dropdown -->
+                        <!-- Insights & Knowledge Dropdown -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle @(string.Equals(currentController, "Insight", StringComparison.OrdinalIgnoreCase) ? "active" : "")" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                                 Insights
@@ -318,7 +354,6 @@
                                             </div>
                                         </div>
 
-                                      
                                         <!-- Knowledge Centre -->
                                         <div class="col">
                                             <div class="mega-menu-card h-100 p-2">
@@ -344,9 +379,13 @@
                         <li class="nav-item">
                             <a class="nav-link @IsActive("Home", "CrisisSupport")" href="#">24*7 Crisis Support</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link @IsActive("Account", "Login")" href="#">Login</a>
-                        </li>
+
+                        @if (User.Identity?.IsAuthenticated != true)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link @IsActive("Account", "Login")" href="@Url.Action("Login", "Account", new { area = "Identity" })">Login</a>
+                            </li>
+                        }
                     </ul>
                 </div>
 

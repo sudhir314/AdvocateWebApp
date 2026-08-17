@@ -1,23 +1,86 @@
 @page
 @model RegisterConfirmationModel
 @{
-    ViewData["Title"] = "Register confirmation";
+    ViewData["Title"] = "Registration Confirmation - Advocate Portal";
 }
 
-<h1>@ViewData["Title"]</h1>
-@{
-    if (@Model.DisplayConfirmAccountLink)
-    {
-<p>
-    This app does not currently have a real email sender registered, see <a href="https://aka.ms/aspaccountconf">these docs</a> for how to configure a real email sender.
-    Normally this would be emailed: <a id="confirm-link" href="@Model.EmailConfirmationUrl">Click here to confirm your account</a>
-</p>
-    }
-    else
-    {
-<p>
-        Please check your email to confirm your account.
-</p>
-    }
-}
+<div class="container py-5 my-auto">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-10 col-lg-8 col-xl-6">
+            <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
 
+                <!-- Card Header with Legal Theme -->
+                <div class="card-header bg-dark text-white text-center py-4 px-3 position-relative" style="background-color: var(--accent-color, #1a2530) !important;">
+                    <div class="mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="42" height="42">
+                            <g fill="none" stroke="#F9FAFB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(0, 2)">
+                                <polygon points="32,24 50,16 68,24" fill="#F9FAFB" fill-opacity="0.15" stroke-width="2" />
+                                <line x1="15" y1="32" x2="85" y2="32" stroke-width="3" />
+                                <circle cx="15" cy="32" r="1.5" fill="#F9FAFB" />
+                                <circle cx="85" cy="32" r="1.5" fill="#F9FAFB" />
+                                <line x1="50" y1="22" x2="50" y2="80" stroke-width="3.5" />
+                                <circle cx="50" cy="12" r="2.5" fill="#F9FAFB" />
+                                <line x1="40" y1="34" x2="40" y2="80" stroke-width="2" />
+                                <line x1="60" y1="34" x2="60" y2="80" stroke-width="2" />
+                                <line x1="15" y1="32" x2="5" y2="58" stroke-width="1.5" />
+                                <line x1="15" y1="32" x2="25" y2="58" stroke-width="1.5" />
+                                <path d="M 3 58 C 3 68, 27 68, 27 58 Z" fill="#F9FAFB" fill-opacity="0.25" stroke-width="2" />
+                                <line x1="85" y1="32" x2="75" y2="58" stroke-width="1.5" />
+                                <line x1="85" y1="32" x2="95" y2="58" stroke-width="1.5" />
+                                <path d="M 73 58 C 73 68, 97 68, 97 58 Z" fill="#F9FAFB" fill-opacity="0.25" stroke-width="2" />
+                                <path d="M 26 80 L 74 80" stroke-width="4" />
+                                <path d="M 20 86 L 80 86" stroke-width="5" />
+                            </g>
+                        </svg>
+                    </div>
+                    <h2 class="fw-bold font-playfair mb-1 text-white" style="font-family: 'Playfair Display', serif;">Registration Complete</h2>
+                    <p class="text-white-50 small mb-0">High Court Legal Portal Account Setup</p>
+                </div>
+
+                <!-- Card Body -->
+                <div class="card-body p-4 p-md-5 text-center bg-white">
+                    <div class="mb-4">
+                        <div class="display-4 text-primary mb-3">
+                            <i class="bi bi-envelope-check"></i>
+                        </div>
+                        <h4 class="fw-bold text-dark mb-3">Verify Your Account</h4>
+
+                        @{
+                            if (@Model.DisplayConfirmAccountLink)
+                            {
+                                <div class="alert alert-warning py-3 small mb-4 text-start shadow-sm" role="alert">
+                                    <i class="bi bi-exclamation-triangle-fill me-1"></i>
+                                    This app does not currently have a real email sender registered. See <a href="https://aka.ms/aspaccountconf" target="_blank" class="alert-link">these docs</a> for how to configure a real email sender.
+                                </div>
+                                <p class="text-muted small mb-4">
+                                    Normally this would be emailed. You can bypass email routing during development by clicking below:
+                                </p>
+                                <div class="d-grid mb-3">
+                                    <a id="confirm-link" href="@Model.EmailConfirmationUrl" class="btn btn-success btn-lg rounded-3 fw-bold py-3 shadow-sm">
+                                        <i class="bi bi-check-circle-fill me-2"></i> Click Here to Confirm Account
+                                    </a>
+                                </div>
+                            }
+                            else
+                            {
+                                <p class="text-muted small px-lg-3 mb-4">
+                                    Please check your email inbox to confirm your new portal account.
+                                </p>
+                                <div class="d-grid">
+                                    <a asp-page="./Login" class="btn btn-primary btn-lg rounded-3 fw-bold py-3 shadow-sm" style="background-color: var(--accent-color, #1a2530); border-color: var(--accent-color, #1a2530);">
+                                        <i class="bi bi-box-arrow-in-right me-2"></i> Proceed to Login
+                                    </a>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Notice Footer -->
+            <div class="text-center mt-3 text-muted" style="font-size: 0.75rem;">
+                <i class="bi bi-shield-lock-fill text-success me-1"></i> Secure High Court Onboarding & Verification Portal
+            </div>
+        </div>
+    </div>
+</div>

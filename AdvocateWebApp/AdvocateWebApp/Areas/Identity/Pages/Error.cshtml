@@ -1,23 +1,82 @@
 @page
 @model ErrorModel
 @{
-    ViewData["Title"] = "Error";
+    ViewData["Title"] = "System Error - Advocate Portal";
 }
 
-<h1 class="text-danger">Error.</h1>
-<h2 class="text-danger">An error occurred while processing your request.</h2>
+<div class="container py-5 my-auto">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
 
-@if (Model.ShowRequestId)
-{
-    <p>
-        <strong>Request ID:</strong> <code>@Model.RequestId</code>
-    </p>
-}
+                <!-- Card Header with Legal Theme (Error Variant) -->
+                <div class="card-header bg-dark text-white text-center py-4 px-3 position-relative" style="background-color: var(--accent-color, #1a2530) !important;">
+                    <div class="mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="42" height="42">
+                            <g fill="none" stroke="#F9FAFB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(0, 2)">
+                                <polygon points="32,24 50,16 68,24" fill="#F9FAFB" fill-opacity="0.15" stroke-width="2" />
+                                <line x1="15" y1="32" x2="85" y2="32" stroke-width="3" />
+                                <circle cx="15" cy="32" r="1.5" fill="#F9FAFB" />
+                                <circle cx="85" cy="32" r="1.5" fill="#F9FAFB" />
+                                <line x1="50" y1="22" x2="50" y2="80" stroke-width="3.5" />
+                                <circle cx="50" cy="12" r="2.5" fill="#F9FAFB" />
+                                <line x1="40" y1="34" x2="40" y2="80" stroke-width="2" />
+                                <line x1="60" y1="34" x2="60" y2="80" stroke-width="2" />
+                                <line x1="15" y1="32" x2="5" y2="58" stroke-width="1.5" />
+                                <line x1="15" y1="32" x2="25" y2="58" stroke-width="1.5" />
+                                <path d="M 3 58 C 3 68, 27 68, 27 58 Z" fill="#F9FAFB" fill-opacity="0.25" stroke-width="2" />
+                                <line x1="85" y1="32" x2="75" y2="58" stroke-width="1.5" />
+                                <line x1="85" y1="32" x2="95" y2="58" stroke-width="1.5" />
+                                <path d="M 73 58 C 73 68, 97 68, 97 58 Z" fill="#F9FAFB" fill-opacity="0.25" stroke-width="2" />
+                                <path d="M 26 80 L 74 80" stroke-width="4" />
+                                <path d="M 20 86 L 80 86" stroke-width="5" />
+                            </g>
+                        </svg>
+                    </div>
+                    <h2 class="fw-bold font-playfair mb-1 text-white" style="font-family: 'Playfair Display', serif;">System Error Occurred</h2>
+                    <p class="text-white-50 small mb-0">High Court Legal Portal Exception Handler</p>
+                </div>
 
-<h3>Development Mode</h3>
-<p>
-    Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.
-</p>
-<p>
-    <strong>Development environment should not be enabled in deployed applications</strong>, as it can result in sensitive information from exceptions being displayed to end users. For local debugging, development environment can be enabled by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>, and restarting the application.
-</p>
+                <!-- Card Body -->
+                <div class="card-body p-4 p-md-5 bg-white">
+                    <div class="text-center mb-4">
+                        <div class="display-4 text-danger mb-2">
+                            <i class="bi bi-exclamation-octagon-fill"></i>
+                        </div>
+                        <h4 class="fw-bold text-dark mb-1">An error occurred while processing your request.</h4>
+                        <p class="text-muted small">Our technical team has been notified of this issue.</p>
+                    </div>
+
+                    @if (Model.ShowRequestId)
+                    {
+                        <div class="alert alert-secondary py-2 small mb-4 text-center" role="alert">
+                            <strong>Request ID:</strong> <code>@Model.RequestId</code>
+                        </div>
+                    }
+
+                    <div class="border-top pt-4 mb-4">
+                        <h6 class="fw-bold text-dark mb-2"><i class="bi bi-code-slash me-1 text-primary"></i> Development Mode Information</h6>
+                        <p class="text-muted small mb-2">
+                            Swapping to the <strong>Development</strong> environment will display more detailed information about the error that occurred.
+                        </p>
+                        <p class="text-muted small mb-0">
+                            <strong>Development environment should not be enabled in deployed applications</strong>, as it can result in sensitive information from exceptions being displayed to end users.
+                        </p>
+                    </div>
+
+                    <!-- Action Link to Home -->
+                    <div class="d-grid">
+                        <a href="@Url.Action("Index", "Home", new { area = "" })" class="btn btn-primary btn-lg rounded-3 fw-bold py-3 shadow-sm" style="background-color: var(--accent-color, #1a2530); border-color: var(--accent-color, #1a2530);">
+                            <i class="bi bi-house-door-fill me-2"></i> Return to Portal Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Notice Footer -->
+            <div class="text-center mt-3 text-muted" style="font-size: 0.75rem;">
+                <i class="bi bi-shield-lock-fill text-danger me-1"></i> Secure High Court Error Logging & Diagnostics
+            </div>
+        </div>
+    </div>
+</div>

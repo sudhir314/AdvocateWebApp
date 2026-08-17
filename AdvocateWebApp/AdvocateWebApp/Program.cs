@@ -10,8 +10,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-// FIXED: Using ApplicationUser instead of default IdentityUser
-builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+// FIXED: Added .AddRoles<IdentityRole>() so RoleManager can be resolved properly in RegisterModel
+// FIXED: Changed RequireConfirmedAccount to false so users can log in immediately after registration
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
@@ -33,6 +35,7 @@ else
 app.UseHttpsRedirection();
 app.UseRouting();
 
+app.UseAuthentication(); // Recommended: Ensure authentication runs before authorization
 app.UseAuthorization();
 
 app.MapStaticAssets();

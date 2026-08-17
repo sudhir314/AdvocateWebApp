@@ -71,6 +71,16 @@ wwwroot\css\home.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\images\about\Ashish.jpeg
+wwwroot\images\insights\banners\article-pub.png
+wwwroot\images\insights\banners\cheque-bounce.png
+wwwroot\images\insights\banners\consumer-court.png
+wwwroot\images\insights\banners\divorce-guide.png
+wwwroot\images\insights\banners\how-to-get-bail.png
+wwwroot\images\insights\banners\internship.png
+wwwroot\images\insights\banners\research-paper.png
+wwwroot\images\insights\banners\sc-updates.png
+wwwroot\images\insights\banners\service-law.png
+wwwroot\images\insights\banners\writ-guide.png
 wwwroot\images\practiceArea\banners\ACP-MACP.png
 wwwroot\images\practiceArea\banners\Anticipatory-Bail.png
 wwwroot\images\practiceArea\banners\Appeal.png
@@ -170,10 +180,3 @@ wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
-..\..\..\downloads\article-pub.png
-..\..\..\downloads\bail-steps.png
-..\..\..\downloads\internship.png
-..\..\..\downloads\research-paper.png
-..\..\..\downloads\sc-updates.png
-..\..\..\downloads\service-law.png
-..\..\..\downloads\writ-guide.png
